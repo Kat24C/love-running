@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: lato, sans-serif;
+    font-family: Lato, sans-serif;
     font-weight: 300;
     color: #3a3a3a;
 }
@@ -15,7 +15,7 @@ body {
 /* headings and logo */
 
 h1, h2 {
-    font-family: oswald, sans-serif;
+    font-family: Oswald, sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
     color: #252525;
@@ -25,7 +25,7 @@ h1, h2 {
     float: left;
     font-size: 280%;
 }
-/*navigation links*/
+/* navigation links */
 
 #menu {
     font-size: 110%;
@@ -54,30 +54,56 @@ h1, h2 {
 .active {
     border-bottom: 1px solid #3a3a3a;
 }
-/* hero image */
+/* hero image and cover text */
 
-#hero-outer{
+#hero-outer {
     height: 600px;
     width: 100%;
     overflow: hidden;
+
+    position: relative;
+}
+
+#cover-text, #cover-text h2 {
+    color: #fff;
 }
 
 #hero-image {
     height: 600px;
     width: 100%;
-    background: url(../image/hero-image.webp) no-repeat center center;
+    background: url('../images/hero-image.webp') no-repeat center center;
 
-    /*animates zoom effect on loading page*/
+    /* animates zoom effect on loading page */
     animation-name: hero-zoom;
     animation-duration: 5s;
     animation-fill-mode: forwards;
 }
-
-@keyframes hero-zoom{
+/* creates the level of zoom for hero image */
+@keyframes hero-zoom {
     from{
         transform: scale(1);
     }
     to{
         transform: scale(1.1);
     }
+}
+
+#cover-text {
+    font-size: 130%;
+    font-family: Oswald, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+    width: 300px;
+    height: 200px;
+
+    padding-top: 40px;
+    padding-left: 10px;
+
+    background-color: rgba(241, 109, 107, .7);
+
+    bottom: 30px;
+    right: 150px;
+
+    position: absolute;
 }
